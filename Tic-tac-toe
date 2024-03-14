@@ -1,0 +1,18 @@
+board = ([
+    [237, 0, 502],
+    [53, 77, 0],
+    [30, 25, 282]
+])
+
+concentric_rings = [222, 333, 555, 777]
+
+from typing import List
+
+def validate_diagonal_tic_tac_toe(board: List[List[int]]) -> bool:
+    for i in range(len(board)):
+        if board[i][i] in concentric_rings:
+            return True
+        if board[i][len(board) - 1 - i] in concentric_rings:
+            return True
+    return False
+print(validate_diagonal_tic_tac_toe(board))
