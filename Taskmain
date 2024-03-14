@@ -1,0 +1,22 @@
+public class TaskMain {
+
+	/**
+	 * 
+	 * @param args
+	 */
+    public static void main(String[] args) {
+
+        Task task1 = new Task("Exam T1", "Create a Task Manager Application", "pending", "2024-02-29");
+
+        System.out.println("Task Title: " + task1.getTitle());
+        System.out.println("Description: " + task1.getDescription());
+        System.out.println("Status: " + task1.getStatus());
+        System.out.println("Due Date: " + task1.getDueDate());
+
+        if (task1.isOverdue()) {
+            System.out.println("This task is overdue!");
+        } else {
+            System.out.println("This task is not yet overdue.");
+        }
+    }
+}
